@@ -8,14 +8,13 @@ Un **componente** es **una pieza de la pantalla** con su diseño y su comportami
 |---|---|
 | `empleado.html` | **Lo que se ve**: card, inputs, botones |
 | `empleado.ts` | **El cerebro**: variables y métodos |
-| `empleado.css` | **Estilos** propios (aquí solo su color `--acento`) |
+| `.css` | **Estilos** propios (vacíos; se usa Bootstrap) |
 
 ```ts
 @Component({
   selector: 'app-empleado',        // nombre de la etiqueta
   imports: [FormsModule],          // FormsModule = para que funcione ngModel
   templateUrl: './empleado.html',  // su html
-  styleUrl: './empleado.css',      // su css
 })
 export class Empleado {
   // variables y métodos

@@ -14,7 +14,7 @@ Nomina/
 └── src/                ← ⭐ AQUÍ SE TRABAJA
     ├── index.html      ← la única página real; Angular mete todo dentro de <app-root>
     ├── main.ts         ← arranque: inicia App con appConfig
-    ├── styles.css      ← DISEÑO GLOBAL (ver [[Diseño CSS]])
+    ├── styles.css      ← estilos globales (vacío; el diseño es de Bootstrap)
     └── app/
         ├── app.ts / app.html   ← componente principal: menú + <router-outlet>
         ├── app.routes.ts       ← rutas: /Empleado → Empleado, etc.

@@ -6,7 +6,6 @@ import { Serviciosempleado } from '../../Services/serviciosempleado';
   selector: 'app-empleado',
   imports: [FormsModule],
   templateUrl: './empleado.html',
-  styleUrl: './empleado.css',
 })
 export class Empleado {
   idEmpleado : any;
