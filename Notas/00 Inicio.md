@@ -9,6 +9,7 @@ Apuntes del proyecto en Angular. Empieza por aquí.
 - [[Organización del repo]] — qué es cada carpeta y qué pasa al abrir la app
 
 ## Trabajo
+- [[API y base de datos]] — la API en C# y la base SQLite: cómo prenderla y cómo funciona
 - [[Cómo lo hice (para el profe)]] — explicación paso a paso de lo que se hizo
 - [[Tareas pendientes]] — lo que falta hacer (con casillas para palomear)
 - [[Cómo funciona]] — html → componente → servicio → API

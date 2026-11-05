@@ -40,3 +40,14 @@ Se mantuvo el diseño original con Bootstrap (card, form-control, botones de col
 - `ng build` → compila sin errores.
 - Se abrió en el navegador con una API de prueba y se revisó que cada botón hiciera su petición:
   `GET /Api/Puesto?id=7` · `POST /Api/Puesto` · `PUT /Api/Puesto` · `DELETE /Api/Puesto?id=7`
+
+## 8. API y base de datos → [[API y base de datos]]
+1. Se creó el proyecto con `dotnet new webapi --use-controllers -n NominaApi`.
+2. Se agregaron los paquetes `Microsoft.EntityFrameworkCore.Sqlite` (base de datos) y `Swashbuckle.AspNetCore` (Swagger).
+3. **Models**: una clase por tabla con `[Key]` en el id.
+4. **NominaContext**: un `DbSet` por tabla; la base es el archivo `nomina.db`.
+5. **Controllers**: uno por catálogo con `[Route("Api/[controller]")]` y los métodos Consultar (GET), Grabar (POST), Modificar (PUT) y Eliminar (DELETE), con los mismos nombres y rutas que ya usaba Angular.
+6. **Program.cs**: registra los controllers, SQLite, **CORS** para `localhost:4200` y Swagger. Al arrancar crea la base con datos de ejemplo.
+7. En Angular solo cambió la `Ruta` de los servicios a `http://localhost:5000/Api/`.
+8. Se probó todo junto: en los 4 catálogos Consultar trae el id 1, Grabar crea el id 50, Modificar lo cambia y Eliminar lo borra.
+
