@@ -11,6 +11,7 @@ Volver a [[00 Inicio]]
 | `Can't bind to 'ngModel'` | Falta `FormsModule` | `imports: [FormsModule]` en el componente |
 | `NullInjectorError: HttpClient` | Falta `provideHttpClient()` | Agregarlo en `app.config.ts` |
 | No llega nada de la API | `Ruta` con puerto 4200 / API apagada | Poner el puerto de la API y encenderla |
+| Consultar trae datos pero las cajas siguen vacías | Angular 21 no redibuja solo después de la API (zoneless) | `this.Pantalla.markForCheck();` con `ChangeDetectorRef` en el constructor |
 | La petición no se hace | Falta `.subscribe(...)` | Siempre suscribirse |
 
 💡 Para ver errores en el navegador: **F12 → Console**.
