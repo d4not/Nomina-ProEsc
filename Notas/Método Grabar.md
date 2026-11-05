@@ -65,3 +65,5 @@ Abajo de `Consultar()`, antes de la última `}`:
 - las variables dentro de `this.Entidad = { ... }`
 
 Siguiente: [[Modificar y Eliminar]]
+
+> ⚠️ En Consultar, después de pasar los datos a las variables, va `this.Pantalla.markForCheck();` para que se vean en las cajas. Ver [[Errores comunes]].

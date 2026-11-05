@@ -2,7 +2,15 @@
 
 Apuntes del proyecto en Angular. Empieza por aquí.
 
-## Notas
+## Lo básico
+- [[Angular y ng]] — qué es Angular y para qué sirve `ng`
+- [[Componente]]
+- [[Servicio]]
+- [[Organización del repo]] — qué es cada carpeta y qué pasa al abrir la app
+
+## Trabajo
+- [[Cómo lo hice (para el profe)]] — explicación paso a paso de lo que se hizo
+- [[Diseño CSS]]
 - [[Tareas pendientes]] — lo que falta hacer (con casillas para palomear)
 - [[Cómo funciona]] — html → componente → servicio → API
 - [[Qué es un método]] — explicado con `Consultar()`

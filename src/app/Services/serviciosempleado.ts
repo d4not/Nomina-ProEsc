@@ -1,26 +1,75 @@
 import { Injectable } from '@angular/core';
-import {HttpClient,HttpHeaders,HttpParams} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root',
 })
 export class Serviciosempleado {
-  Ruta="http://localhost:4200/Api/";
 
-  constructor( private HTTP : HttpClient)
+  Ruta = "http://localhost:4200/Api/";
+
+  constructor(private HTTP : HttpClient)
   {
 
   }
 
+  // Consultar: trae UN registro por su id (GET)
   Consultar(idEmpleado : any)
   {
-    let Controller = "Empleado" 
+    let Controller = "Empleado";
+    let Params = new HttpParams().set("id", idEmpleado);
+    let Headers = new HttpHeaders().set("Accept", "Application/json");
 
-    let Params= new HttpParams().set("id",idEmpleado);
+    return this.HTTP.get(
+      this.Ruta + Controller,
+      {
+        headers: Headers,
+        params: Params,
+        responseType: 'json'
+      }
+    );
+  }
 
-    let Headers = new HttpHeaders().set("Accept","Application/json");
+  // Grabar: crea un registro NUEVO (POST). Los datos van en Entidad
+  Grabar(Entidad : any)
+  {
+    let Controller = "Empleado";
+    let Headers = new HttpHeaders().set("Accept", "Application/json");
 
+    return this.HTTP.post(
+      this.Ruta + Controller,
+      Entidad,
+      {
+        headers: Headers,
+        responseType: 'json'
+      }
+    );
+  }
 
-   return this.HTTP.get(
+  // Modificar: actualiza un registro que YA existe (PUT)
+  Modificar(Entidad : any)
+  {
+    let Controller = "Empleado";
+    let Headers = new HttpHeaders().set("Accept", "Application/json");
+
+    return this.HTTP.put(
+      this.Ruta + Controller,
+      Entidad,
+      {
+        headers: Headers,
+        responseType: 'json'
+      }
+    );
+  }
+
+  // Eliminar: borra un registro por su id (DELETE)
+  Eliminar(idEmpleado : any)
+  {
+    let Controller = "Empleado";
+    let Params = new HttpParams().set("id", idEmpleado);
+    let Headers = new HttpHeaders().set("Accept", "Application/json");
+
+    return this.HTTP.delete(
       this.Ruta + Controller,
       {
         headers: Headers,

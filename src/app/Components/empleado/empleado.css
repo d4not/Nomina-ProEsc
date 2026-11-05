@@ -1,0 +1,4 @@
+/* Color propio de este catálogo. El resto del diseño está en src/styles.css */
+:host {
+  --acento: #6d28d9;
+}

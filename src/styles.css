@@ -1,1 +1,181 @@
-/* You can add global styles to this file, and also import other style files */
+/* =========================================================
+   DISEÑO GLOBAL DEL PROYECTO NÓMINA
+   Este archivo aplica a TODA la app. Bootstrap se carga antes
+   (angular.json), así que estas reglas lo personalizan.
+   Cada catálogo solo define su color en su propio .css (--acento).
+   ========================================================= */
+
+/* ---------- 1. Colores y medidas reutilizables ---------- */
+:root {
+  --fondo: #f4f1ea;          /* papel cálido */
+  --tarjeta: #fffdf8;
+  --tinta: #1c1f2a;          /* texto principal */
+  --tinta-suave: #6b6f7b;    /* texto secundario */
+  --linea: #e3ddd0;          /* bordes */
+  --barra: #161a26;          /* menú */
+  --acento: #6d28d9;         /* color por defecto (cada catálogo lo cambia) */
+  --radio: 14px;
+  --sombra: 0 1px 2px rgba(28, 31, 42, .06), 0 12px 32px -12px rgba(28, 31, 42, .18);
+}
+
+/* ---------- 2. Base ---------- */
+body {
+  background-color: var(--fondo);
+  background-image: radial-gradient(rgba(28, 31, 42, .045) 1px, transparent 1px);
+  background-size: 18px 18px;
+  color: var(--tinta);
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* ---------- 3. Menú (navbar) ---------- */
+.barra {
+  background: var(--barra);
+  padding: .7rem 1.5rem;
+  border-bottom: 3px solid #e8b04b;   /* línea dorada */
+}
+.barra__marca {
+  font-weight: 800;
+  letter-spacing: .02em;
+  color: #fff !important;
+}
+.barra__marca::before {               /* cuadrito dorado antes del nombre */
+  content: "";
+  display: inline-block;
+  width: 12px; height: 12px;
+  margin-right: .55rem;
+  background: #e8b04b;
+  border-radius: 3px;
+}
+.barra .nav-link {
+  color: rgba(255, 255, 255, .7) !important;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: .4rem .85rem !important;
+  margin: 0 .1rem;
+  transition: background .15s, color .15s;
+}
+.barra .nav-link:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, .08);
+}
+.barra .nav-link.activo {             /* la pantalla en la que estás */
+  color: var(--barra) !important;
+  background: #e8b04b;
+}
+
+/* ---------- 4. Página ---------- */
+.pagina {
+  padding: 2.5rem 1rem 4rem;
+}
+.contenedor {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ---------- 5. Tarjeta de catálogo (card de Bootstrap) ---------- */
+.catalogo {
+  background: var(--tarjeta);
+  border: 1px solid var(--linea);
+  border-top: 6px solid var(--acento);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+.catalogo__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  border-bottom: 1px dashed var(--linea);
+  padding: 1.4rem 1.75rem;
+}
+.catalogo__icono {                    /* el cuadrito con las iniciales */
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--acento) 12%, white);
+  color: var(--acento);
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+.catalogo__titulo {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.catalogo__subtitulo {
+  margin: .15rem 0 0;
+  color: var(--tinta-suave);
+  font-size: .9rem;
+}
+
+/* ---------- 6. Campos (form-control de Bootstrap) ---------- */
+.catalogo__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;     /* dos columnas */
+  gap: 0 1.25rem;
+  padding: 1.5rem 1.75rem .5rem;
+}
+.campo--id {                          /* el id ocupa toda la fila */
+  grid-column: 1 / -1;
+}
+.form-label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--tinta-suave);
+  margin-bottom: .35rem;
+}
+.form-control {
+  border: 1.5px solid var(--linea);
+  border-radius: 10px;
+  padding: .65rem .85rem;
+  background: #fff;
+  transition: border-color .15s, box-shadow .15s;
+}
+.form-control:focus {
+  border-color: var(--acento);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--acento) 15%, transparent);
+}
+.campo--id .form-control {            /* el id con letra tipo "máquina" */
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  background: color-mix(in srgb, var(--acento) 4%, white);
+}
+
+/* ---------- 7. Botones ---------- */
+.catalogo__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  background: transparent;
+  border-top: 1px dashed var(--linea);
+  padding: 1.1rem 1.75rem 1.4rem;
+}
+.boton {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: .6rem 1.2rem;
+  border: 1.5px solid transparent;
+  transition: transform .1s, filter .15s, background .15s;
+}
+.boton:hover  { filter: brightness(1.08); transform: translateY(-1px); }
+.boton:active { transform: translateY(0); }
+
+.boton--consultar { background: var(--acento); color: #fff; }
+.boton--grabar    { background: var(--tinta);  color: #fff; }
+.boton--modificar { background: #fff; color: var(--tinta); border-color: var(--linea); }
+.boton--eliminar  { background: transparent; color: #b42318; margin-left: auto; }
+.boton--eliminar:hover { background: #fdecea; filter: none; }
+.boton:hover { color: inherit; }
+.boton--consultar:hover, .boton--grabar:hover { color: #fff; }
+
+/* ---------- 8. Celular: todo en una columna ---------- */
+@media (max-width: 576px) {
+  .catalogo__body { grid-template-columns: 1fr; }
+  .boton { flex: 1 1 45%; }
+  .boton--eliminar { margin-left: 0; }
+}

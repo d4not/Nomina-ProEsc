@@ -1,36 +1,37 @@
 # ✅ Tareas pendientes
 
-Volver a [[00 Inicio]]
+Volver a [[00 Inicio]] · Lo que se hizo: [[Cómo lo hice (para el profe)]]
 
 ## Empleado
-- [ ] Poner `(click)` en Grabar, Eliminar y Modificar (`empleado.html`)
-- [ ] Crear `Grabar()`, `Modificar()`, `Eliminar()` en `serviciosempleado.ts`
-- [ ] Crear `Grabar()`, `Modificar()`, `Eliminar()` en `empleado.ts`
-- [ ] Borrar `empleado.spec.ts`
+- [x] `(click)` en Grabar, Eliminar y Modificar
+- [x] `Grabar()`, `Modificar()`, `Eliminar()` en `serviciosempleado.ts`
+- [x] `Grabar()`, `Modificar()`, `Eliminar()` en `empleado.ts`
 
 ## Categoría
-- [x] Poner `(click)` en los 4 botones
-- [ ] Crear los 3 métodos en `Servicioscategoria.ts`
-- [ ] Crear los 3 métodos en `categoria.ts`
-- [ ] Decidir si el campo es `Nombre` (notas) o `descripcion` (código)
-- [ ] Borrar `categoria.spec.ts`
-
-> ⚠️ Mientras no existan los métodos en `categoria.ts`, `ng serve` marca error *"Property 'Grabar' does not exist"*. Es normal.
+- [x] `(click)` en los 4 botones
+- [x] Los 3 métodos en `Servicioscategoria.ts`
+- [x] Los 3 métodos en `categoria.ts`
+- [ ] Confirmar si el campo es `Nombre` (notas) o `descripcion` (código) → se dejó `descripcion`
 
 ## Departamento
-- [ ] Poner `(click)` en Grabar, Eliminar y Modificar
-- [ ] Crear los 3 métodos en `Serviciosdepartamento.ts`
-- [ ] Crear los 3 métodos en `departamento.ts`
-- [ ] Borrar `departamento.spec.ts`
+- [x] `(click)` en Grabar, Eliminar y Modificar
+- [x] Los 3 métodos en `Serviciosdepartamento.ts`
+- [x] Los 3 métodos en `departamento.ts`
+- [x] Borrar `departamento.spec.ts`
 
 ## Puesto → ver [[Puesto desde cero]]
-- [x] Hacer la card en `puesto.html`
-- [ ] Corregir `[(ngModel)]`: usar `idPuesto`, `descripcion`, `idDepartamento` (tiene los de Departamento copiados)
-- [ ] Poner `(click)` en Grabar, Eliminar y Modificar
-- [ ] Llenar `serviciospuesto.ts` (está vacío)
-- [ ] Llenar `puesto.ts` (está vacío)
-- [ ] Borrar `puesto.spec.ts`
+- [x] Card en `puesto.html`
+- [x] `[(ngModel)]` corregidos: `idPuesto`, `descripcion`, `idDepartamento`
+- [x] `(click)` en los 4 botones
+- [x] `serviciospuesto.ts` completo
+- [x] `puesto.ts` completo
+- [x] Borrar `puesto.spec.ts`
 
-## Todos los servicios
-- [ ] Cambiar el puerto de `Ruta` (`http://localhost:4200/Api/`) por el de la API — 4200 es el de Angular
-- [ ] Preguntar al profe si la API usa POST / PUT / DELETE
+## Extra
+- [x] Arreglar que Consultar no mostraba los datos → ver [[Errores comunes]]
+- [x] Nuevo diseño con CSS → ver [[Diseño CSS]]
+
+## Falta (no se puede sin la API)
+- [ ] Cambiar el puerto de `Ruta` (`http://localhost:4200/Api/`) por el de la API en los 4 servicios — 4200 es el de Angular
+- [ ] Confirmar con el profe que la API usa POST / PUT / DELETE
+- [ ] Nivel y Unidad siguen sin hacer (mismo patrón que Departamento)
