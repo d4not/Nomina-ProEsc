@@ -31,7 +31,7 @@ this.Pantalla.markForCheck();   // "Angular, vuelve a dibujar"
 ```
 
 ## 5. Diseño
-Se mantuvo el diseño original con Bootstrap (card, form-control, botones de colores). Solo cambió el `id` de cada input.
+Se mantuvo el diseño original con Bootstrap (card, form-control, botones de colores). Cambios: el `id` de cada input, el menú en azul marino (`#1f2a44`) y los títulos sin franja de fondo, solo con el texto de color: Empleado verde azulado `#0f766e`, Categoría ámbar `#b45309`, Departamento morado `#7c3aed`, Puesto rosa `#be185d` (en el `style` de cada `<h5>`).
 
 ## 6. Limpieza
 - Se borraron `departamento.spec.ts` y `puesto.spec.ts`.
