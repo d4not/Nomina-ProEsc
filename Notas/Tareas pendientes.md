@@ -29,7 +29,7 @@ Volver a [[00 Inicio]] · Lo que se hizo: [[Cómo lo hice (para el profe)]]
 
 ## Extra
 - [x] Arreglar que Consultar no mostraba los datos → ver [[Errores comunes]]
-- [x] Nuevo diseño con CSS → ver [[Diseño CSS]]
+- [x] Se mantiene el diseño original (Bootstrap)
 
 ## Falta (no se puede sin la API)
 - [ ] Cambiar el puerto de `Ruta` (`http://localhost:4200/Api/`) por el de la API en los 4 servicios — 4200 es el de Angular

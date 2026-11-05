@@ -6,7 +6,6 @@ import { Serviciosdepartamento } from '../../Services/Serviciosdepartamento';
   selector: 'app-departamento',
   imports: [FormsModule],
   templateUrl: './departamento.html',
-  styleUrl: './departamento.css',
 })
 export class Departamento {
   idDepartamento : any;

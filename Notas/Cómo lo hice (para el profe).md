@@ -30,7 +30,8 @@ constructor(private SerPuesto : Serviciospuesto, private Pantalla : ChangeDetect
 this.Pantalla.markForCheck();   // "Angular, vuelve a dibujar"
 ```
 
-## 5. Diseño → [[Diseño CSS]]
+## 5. Diseño
+Se mantuvo el diseño original con Bootstrap (card, form-control, botones de colores). Solo cambió el `id` de cada input.
 
 ## 6. Limpieza
 - Se borraron `departamento.spec.ts` y `puesto.spec.ts`.

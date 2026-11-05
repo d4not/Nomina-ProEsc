@@ -1,31 +1,25 @@
-<div class="contenedor">
-  <div class="card catalogo">
-    <div class="card-header catalogo__header">
-      <span class="catalogo__icono">DE</span>
-      <div>
-        <h5 class="catalogo__titulo">Catálogo de Departamentos</h5>
-        <p class="catalogo__subtitulo">Departamentos y la unidad a la que pertenecen</p>
-      </div>
+<div class="card">
+  <div class="card-header">
+    <h5 style="background-color:rgb(248, 1, 1);color:aliceblue;">Catalogo De Departamentos</h5> 
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="idDepartamento" class="form-label">Id Departamento</label>
+      <input type="text" class="form-control" id="idDepartamento" placeholder="idDepartamento" [(ngModel)]="idDepartamento">
     </div>
-    <div class="card-body catalogo__body">
-      <div class="mb-3 campo campo--id">
-        <label for="idDepartamento" class="form-label">Id Departamento</label>
-        <input type="text" class="form-control" id="idDepartamento" placeholder="Id Departamento" [(ngModel)]="idDepartamento">
-      </div>
-      <div class="mb-3 campo">
-        <label for="descripcion" class="form-label">Descripción</label>
-        <input type="text" class="form-control" id="descripcion" placeholder="Descripción" [(ngModel)]="descripcion">
-      </div>
-      <div class="mb-3 campo">
-        <label for="idUnidad" class="form-label">Id Unidad</label>
-        <input type="text" class="form-control" id="idUnidad" placeholder="Id Unidad" [(ngModel)]="idUnidad">
-      </div>
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripcion</label>
+      <input type="text" class="form-control" id="descripcion" placeholder="Descripcion" [(ngModel)]="descripcion">
     </div>
-    <div class="card-footer catalogo__acciones">
-      <button type="button" class="btn boton boton--consultar" (click)="Consultar()">Consultar</button>
-      <button type="button" class="btn boton boton--grabar" (click)="Grabar()">Grabar</button>
-      <button type="button" class="btn boton boton--modificar" (click)="Modificar()">Modificar</button>
-      <button type="button" class="btn boton boton--eliminar" (click)="Eliminar()">Eliminar</button>
+    <div class="mb-3">
+      <label for="idUnidad" class="form-label">Id Unidad</label>
+      <input type="text" class="form-control" id="idUnidad" placeholder="idUnidad" [(ngModel)]="idUnidad">
+    </div>
+    <div class="mt-3">
+      <button type="button" class="btn btn-primary me-2" (click)="Consultar()">Consultar</button>
+      <button type="button" class="btn btn-success me-2" (click)="Grabar()">Grabar</button>
+      <button type="button" class="btn btn-danger me-2" (click)="Eliminar()">Eliminar</button>
+      <button type="button" class="btn btn-warning" (click)="Modificar()">Modificar</button>
     </div>
   </div>
 </div>

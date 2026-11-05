@@ -6,7 +6,6 @@ import { Servicioscategoria } from '../../Services/Servicioscategoria';
   selector: 'app-categoria',
   imports: [FormsModule],
   templateUrl: './categoria.html',
-  styleUrl: './categoria.css',
 })
 export class Categoria {
   idCategoria : any;
