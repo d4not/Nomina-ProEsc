@@ -42,3 +42,10 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# API (.NET)
+NominaApi/bin/
+NominaApi/obj/
+NominaApi/*.db
+NominaApi/*.db-shm
+NominaApi/*.db-wal

@@ -5,6 +5,7 @@ Volver a [[00 Inicio]]
 ```
 Nomina/
 ├── Notas/              ← estos apuntes (Obsidian)
+├── NominaApi/          ← la API en C# + base de datos SQLite (ver [[API y base de datos]])
 ├── node_modules/       ← librerías descargadas. NO se toca, NO se sube
 ├── public/             ← íconos (favicon)
 ├── package.json        ← librerías del proyecto y comandos (npm start)

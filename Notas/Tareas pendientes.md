@@ -31,7 +31,9 @@ Volver a [[00 Inicio]] · Lo que se hizo: [[Cómo lo hice (para el profe)]]
 - [x] Arreglar que Consultar no mostraba los datos → ver [[Errores comunes]]
 - [x] Se mantiene el diseño original (Bootstrap)
 
-## Falta (no se puede sin la API)
-- [ ] Cambiar el puerto de `Ruta` (`http://localhost:4200/Api/`) por el de la API en los 4 servicios — 4200 es el de Angular
-- [ ] Confirmar con el profe que la API usa POST / PUT / DELETE
-- [ ] Nivel y Unidad siguen sin hacer (mismo patrón que Departamento)
+## API y base de datos → [[API y base de datos]]
+- [x] API en ASP.NET Core (C#) con SQLite
+- [x] `Ruta` de los 4 servicios → `http://localhost:5000/Api/`
+
+## Falta
+- [ ] Pantallas de Nivel y Unidad en Angular (la API ya los tiene)

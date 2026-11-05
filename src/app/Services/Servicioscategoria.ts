@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class Servicioscategoria {
 
-  Ruta = "http://localhost:4200/Api/";
+  Ruta = "http://localhost:5000/Api/";
 
   constructor(private HTTP : HttpClient)
   {
